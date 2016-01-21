@@ -17,7 +17,8 @@ public class ListOfWords {
         ArrayList<String> listMembers = new ArrayList<String>();
 
         for (int i = leadingLettersSize; i < listSize + leadingLettersSize; i++) {
-            int indexToPass = listSize % leadingLettersSize;
+            int indexToPass = i % leadingLettersSize;
+            System.out.println("char index: " + indexToPass);
             char leadLetter = leadingLetters.get(indexToPass);
             String word = new Word(leadLetter).getRandomWord();
             listMembers.add(word);
@@ -31,7 +32,7 @@ public class ListOfWords {
             System.out.println(word);
         }
     }
-    
+
 
     //private Request listData;
     private ArrayList<String> outList;
