@@ -15,6 +15,6 @@ public class Sorter {
     public ArrayList<String> getListOfWords() {
         return null;
     }
-    
+
     private ArrayList<String> listOfWords;
 }

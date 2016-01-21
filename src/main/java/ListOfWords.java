@@ -5,19 +5,35 @@ import java.util.ArrayList;
  */
 public class ListOfWords {
 
-    public ListOfWords() {
-
+    public ListOfWords(Request listData) {
+        outList = generateList(listData);
     }
 
-    public void generateList() {
+    private static ArrayList<String> generateList(Request listData) {
+        int listSize = listData.getListSize();
+        ArrayList<Character> leadingLetters = listData.getLettersArray();
+        int leadingLettersSize = leadingLetters.size();
 
+        ArrayList<String> listMembers = new ArrayList<String>();
+
+        for (int i = leadingLettersSize; i < listSize + leadingLettersSize; i++) {
+            int indexToPass = listSize % leadingLettersSize;
+            char leadLetter = leadingLetters.get(indexToPass);
+            String word = new Word(leadLetter).getRandomWord();
+            listMembers.add(word);
+        }
+
+        return listMembers;
     }
 
-    public ArrayList<String> getOutList() {
-        return null;
+    public void printList() {
+        for (String word: outList) {
+            System.out.println(word);
+        }
     }
+    
 
-    private Request listData;
+    //private Request listData;
     private ArrayList<String> outList;
 
 }
