@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by joseph on 1/19/16.
@@ -23,8 +24,18 @@ public class ListOfWords {
             listMembers.add(word);
         }
 
+        // sorting logic
+        boolean sortThis = listData.getSort();
+        if (sortThis) {
+            Collections.sort(listMembers);
+        }
+
         return listMembers;
     }
+
+
+
+
 
     public void printList() {
         for (String word: outList) {

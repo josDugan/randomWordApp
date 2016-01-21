@@ -11,6 +11,7 @@ public class Request {
         listSize = promptUserForListSize();
         lettersArray = promptUserForLettersArray();
         sort = promptUserForSortOption();
+        System.out.println(sort);
     }
 
     private static int promptUserForListSize() {
@@ -49,16 +50,13 @@ public class Request {
 
         System.out.println("Please enter the letters you would like to begin your words.");
         Scanner in = new Scanner(System.in);
-
-        while (in.hasNext()) {
-            char inputItem = in.next().charAt(0);
-            if (Character.isLetter(inputItem)) {
-                leadingLetters.add(inputItem);
-            }
-            else {
-                break;
-            }
+        String inputString = in.next();
+        for (int i = 0; i < inputString.length(); i++) {
+            char character = inputString.charAt(i);
+            if (Character.isLetter(character))
+                leadingLetters.add(character);
         }
+
         return leadingLetters;
     }
 
