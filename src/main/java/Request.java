@@ -59,7 +59,6 @@ public class Request {
                 break;
             }
         }
-        System.out.println(leadingLetters);
         return leadingLetters;
     }
 
