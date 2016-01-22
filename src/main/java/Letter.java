@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 /**
  * Created by joseph on 1/20/16.
+ *
  */
 public class Letter {
     public Letter() {

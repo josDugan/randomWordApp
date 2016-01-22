@@ -36,6 +36,7 @@ public class ListOfWords {
 
 
 
+    private ArrayList<String> outList;
 
     public void printList() {
         for (String word: outList) {
@@ -44,7 +45,6 @@ public class ListOfWords {
     }
 
 
-    //private Request listData;
-    private ArrayList<String> outList;
+
 
 }
